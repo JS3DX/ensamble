@@ -214,6 +214,23 @@ header span {
     animation-name: fadeIn; /* @keyframes fadeIn */
     animation-duration: 2.5s; /* @keyframes fadeIn */
     animation-fill-mode: both; /* @keyframes fadeIn */
+    animation: fadeIn 2.5s both; 
+}
+
+@keyframes fadeIn {
+
+	0% {
+	opacity: 0;
+    
+	-webkit-transform: translate3d(0,40%,0);
+	transform: translate3d(0,40%,0);
+	}
+
+	100% {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	}
 }
 
 .timeline-grids {
@@ -248,19 +265,5 @@ header span {
     padding: 0;
 }
 
-@keyframes fadeIn {
 
-	from {
-	opacity: 0;
-    
-	-webkit-transform: translate3d(0,40%,0);
-	transform: translate3d(0,40%,0);
-	}
-
-	to {
-	opacity: 1;
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-	}
-}
 
