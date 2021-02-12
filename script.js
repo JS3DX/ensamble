@@ -15,42 +15,23 @@ box.forEach(box => {
 }); */
 
 
-/*
-const elementsToExpand = document.querySelectorAll(".expand");
-
-
-let expansionObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.intersectionRatio > 0) {
-        // something here
-        entry.target.classList.add('isVisible');
-    } else {
-        // something here
-        entry.target.classList.remove('isVisible');
-    }
-  });
-});
-
-elementsToExpand.forEach((element) => {
-  expansionObserver.observe(element);
-});
-
-*/
 
 
 
-const elementsToExpand = document.querySelectorAll(".timeline-graphs");
+const elementsToExpand = document.querySelectorAll('.timeline-graphs');
 
 let expansionObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.intersectionRatio > 0) {
       console.log('Yep');
       //entry.target.style.animation = `expansion 2s ease-in-out`;
+
     } else {
       // entry.target.style.animation = "none";
       console.log('Nope')
     }
   });
+
 });
 
 elementsToExpand.forEach((element) => {
