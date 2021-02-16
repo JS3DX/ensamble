@@ -70,6 +70,7 @@ header {
     margin-top: 5em;
     padding: 1em 1.5em;
     font-size: 1.8em;
+    z-index: 1;
 }
 
 header span {
@@ -207,14 +208,16 @@ header span {
     text-align: center;
     align-items: center;
 
+
 }
 
 .timeline-graphs.isVisible {
-    
+    /* funciona en conjunto del intersectionObserver del JavaScript*/
+    /* la clase .isVisible se agregará a los elementos que usen la clase .timeline-graph cuando entran al viewport*/
+    /* con esto hacemos que esta animaión se active siempre que haya intersección de .timeline-graphs con el viewport */
     animation-name: fadeIn; /* @keyframes fadeIn */
     animation-duration: 2.5s; /* @keyframes fadeIn */
     animation-fill-mode: both; /* @keyframes fadeIn */
-    animation: fadeIn 2.5s both; 
 }
 
 @keyframes fadeIn {
@@ -222,12 +225,15 @@ header span {
 	0% {
 	opacity: 0;
     
+    background-color: blue;
 	-webkit-transform: translate3d(0,40%,0);
 	transform: translate3d(0,40%,0);
 	}
 
 	100% {
 	opacity: 1;
+    transform: translate(0, 0);
+    background-color: blue;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 	}
@@ -265,5 +271,102 @@ header span {
     padding: 0;
 }
 
+.projects {
+    background: white;
+    width: 100%;;
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    color: black;
+}
 
+.projects h2 {
+    margin-top: 3em;
+}
 
+#legend {
+    display: flex;
+    flex-flow: column wrap;
+    background-color: green;
+}
+
+#legend ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+}
+
+#legend li {
+    padding: 1.5em;
+    font-size: 1.3em;
+}
+
+#legend span {
+    font-weight: 600;
+}
+
+.projects-grid {
+    background-color: purple;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.projects-pics {
+    padding: 1.2em;
+}
+
+.projects-pics::before {
+    /* Establece el cuadro de texto (sin texto) para todos los elementos con la clase .projects-pics */
+    content: ' ';
+    display: flex;
+    background-color: black;
+    width: 25%;
+    height: 50px;
+    margin-bottom: -50px;
+    margin-left: 65%;
+    position: relative;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+#pr-pic-1::before {
+    /* Establece el texto para el ::before para este ID */
+    /* Este texto se agrega sobre el cuadro creado por el ::before ya creado para .projects-pics que es quien estiliza ese recuadro */
+    content: 'A + GI + GC';
+}
+
+#pr-pic-2::before {
+    /* Establece el texto para el ::before para este ID */
+    /* Este texto se agrega sobre el cuadro creado por el ::before ya creado para .projects-pics que es quien estiliza ese recuadro */
+    content: 'GI + GC';
+}
+
+#pr-pic-3::before {
+    /* Establece el texto para el ::before para este ID */
+    /* Este texto se agrega sobre el cuadro creado por el ::before ya creado para .projects-pics que es quien estiliza ese recuadro */
+    content: 'A + GI + GC';
+}
+
+#pr-pic-4::before {
+    /* Establece el texto para el ::before para este ID */
+    /* Este texto se agrega sobre el cuadro creado por el ::before ya creado para .projects-pics que es quien estiliza ese recuadro */
+    content: 'GC';
+}
+
+.projects-pics::after {
+    /* Establece el cuadro de texto (sin texto) para todos los elementos con la clase .projects-pics */
+    content: 'HOLA';
+    background-color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: black;
+    font-weight: 600;
+    font-size: 1.1em;
+}
