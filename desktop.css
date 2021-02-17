@@ -311,6 +311,7 @@ header span {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    height: 100vh;
 }
 
 .projects-pics {
@@ -359,14 +360,76 @@ header span {
     content: 'GC';
 }
 
-.projects-pics::after {
-    /* Establece el cuadro de texto (sin texto) para todos los elementos con la clase .projects-pics */
-    content: 'HOLA';
-    background-color: white;
-    display: block;
-    width: 100%;
-    height: 100%;
-    color: black;
-    font-weight: 600;
-    font-size: 1.1em;
+
+#pr-pic-1 {
+    background-image: linear-gradient(75deg, rgba(255, 255, 255, 0) 100%, rgba(255,255,255,0) 0%), url(img/pr-1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30%;
+    margin: 1em;
+    
+    transition: all 0.5s ease;
+}
+
+#pr-pic-1:hover {
+    animation-name: frostLayer; /* @keyframes fadeIn */
+    animation-duration: 0.2s; /* @keyframes fadeIn */
+    animation-fill-mode: both; /* @keyframes fadeIn */
+    transition: all 0.3s ease-in-out;
+}
+
+#pr-pic-1:hover:after {
+    content: "Hi sdfsdfsd fsdffa ff dfsdf fafa fdfafa ff dff sdfAenean non libero sit amet leo bibendum finibus. Duis facilisis pretium nibh eget elementum. Proin posuere ultrices neque. Sed semper augue volutpat dictum viverra. Sed faucibus tincidunt eros. Praesent tristique iaculis arcu quis vehicula. Proin non leo malesuada, ultrices lorem ut, sollicitudin neque. Nam malesuada malesuada mi, ullamcorper blandit arcu euismod nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. ";
+    margin: 0;
+    padding: 0;
+    background: red;
+    display: float;
+}
+
+
+
+
+@keyframes frostLayer {
+    0% {
+        background-image: linear-gradient(75deg, rgba(255, 255, 255, 0) 100%, rgba(255,255,255,0) 0%), url(img/pr-1.jpg);
+    }
+    25% {
+        background-image: linear-gradient(75deg, rgba(255, 255, 255, 0.1) 100%, rgba(255,255,255,0.1) 0%), url(img/pr-1.jpg);
+    }
+    50% {
+        background-image: linear-gradient(75deg, rgba(255, 255, 255, 0.2) 100%, rgba(255,255,255,0.2) 0%), url(img/pr-1.jpg);
+    }
+    75% {
+        background-image: linear-gradient(75deg, rgba(255, 255, 255, 0.4) 100%, rgba(255,255,255,0.4) 0%), url(img/pr-1.jpg);
+    }
+    100% {
+        background-image: linear-gradient(75deg, rgba(255, 255, 255, 0.65) 100%, rgba(255, 255, 255, 0.65) 0%), url(img/pr-1.jpg);
+    }
+}
+
+
+
+
+#pr-pic-2 {
+    background-image: url(img/pr-2.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30%;
+    margin: 1em;
+}
+
+#pr-pic-3 {
+    background-image: url(img/pr-3.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30%;
+    margin: 1em;
+}
+
+#pr-pic-4 {
+    background-image: url(img/pr-4.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30%;
+    margin: 1em;
 }
