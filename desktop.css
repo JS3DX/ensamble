@@ -316,6 +316,11 @@ header span {
 
 .projects-pics {
     padding: 1.2em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30%;
+    margin: 1em;
+    transition: all 0.5s ease;
 }
 
 .projects-pics::before {
@@ -363,28 +368,56 @@ header span {
 
 #pr-pic-1 {
     background-image: linear-gradient(75deg, rgba(255, 255, 255, 0) 100%, rgba(255,255,255,0) 0%), url(img/pr-1.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 30%;
-    margin: 1em;
     
-    transition: all 0.5s ease;
 }
 
-#pr-pic-1:hover {
+
+.projects-info {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: #fff;
+    transform: translateY(100%)
+      translateY(-88px)
+      translateZ(0);
+    transition: transform 0.5s ease-out;
+}
+
+.projects-info:before {
+    z-index: -1;
+    display: block;
+    position: absolute;
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(https://source.unsplash.com/collection/905011/1000x1000);
+    filter: blur(10px);
+    background-size: cover;
+    opacity: 0.25;
+    transform: translateY(-100%)
+      translateY(88px)
+      translateZ(0);
+    transition: transform 0.5s ease-out;
+  }
+
+
+
+
+/* #pr-pic-1:hover {
     animation-name: frostLayer; /* @keyframes fadeIn */
     animation-duration: 0.2s; /* @keyframes fadeIn */
     animation-fill-mode: both; /* @keyframes fadeIn */
     transition: all 0.3s ease-in-out;
-}
+} */
 
-#pr-pic-1:hover:after {
+/* #pr-pic-1:hover:after {
     content: "Hi sdfsdfsd fsdffa ff dfsdf fafa fdfafa ff dff sdfAenean non libero sit amet leo bibendum finibus. Duis facilisis pretium nibh eget elementum. Proin posuere ultrices neque. Sed semper augue volutpat dictum viverra. Sed faucibus tincidunt eros. Praesent tristique iaculis arcu quis vehicula. Proin non leo malesuada, ultrices lorem ut, sollicitudin neque. Nam malesuada malesuada mi, ullamcorper blandit arcu euismod nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. ";
     margin: 0;
     padding: 0;
     background: red;
     display: float;
-}
+} */
 
 
 
