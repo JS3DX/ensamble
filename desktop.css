@@ -382,7 +382,7 @@ header span {
     height: 150%;
     background-color: #fff; /* color del frostglass - container de info */
     transform: translateY(100%)
-      translateY(10%) /* saca del frame a la imágen :before de fondo - Debe ser el opuesto (+/-) del translateY de :before */
+      translateY(10%) /* saca del frame a la imágen de #pr-info-1:before - Debe ser el opuesto (+/-) del translateY de :before */
       translateZ(0);
     transition: transform 0.5s ease-out;
     margin-left: -5%;
@@ -403,7 +403,7 @@ header span {
     background-size: contain;
     opacity: 0.1;
     transform: translateY(-100%)
-      translateY(-10%)  /* saca del frame al frostglass - Debe ser el opuesto (+/-) del translateY del frostglass */
+      translateY(-10%)  /* saca del frame al frostglass de #pr-info-1 - Debe ser el opuesto (+/-) del translateY del frostglass */
       translateZ(0);
     transition: transform 0.5s ease-out;
   }
