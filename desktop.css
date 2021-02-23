@@ -314,83 +314,42 @@ header span {
     height: 100vh;
 }
 
+
+
+
+
+
+
+
 .projects-pics {
     padding: 1.2em;
-    background-size: contain;
-    background-repeat: no-repeat;
+    /* background-size: contain;
+    background-repeat: no-repeat;*/
     width: 30%;
     margin: 1em;
-    /* transition: all 0.5s ease; */
-}
-
-.projects-pics::before {
-    /* Establece el cuadro de texto (sin texto) para todos los elementos con la clase .projects-pics */
-    content: ' ';
-    display: flex;
-    background-color: black;
-    width: 25%;
-    height: 50px;
-    margin-bottom: -50px;
-    margin-left: 65%;
-    position: relative;
-    color: white;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    font-size: 1.1em;
-}
-
-#pr-pic-1::before {
-    /* Establece el texto para el ::before para este ID */
-    /* Este texto se agrega sobre el cuadro creado por el ::before ya creado para .projects-pics que es quien estiliza ese recuadro */
-    content: 'A + GI + GC';
-}
-
-#pr-pic-2::before {
-    /* Establece el texto para el ::before para este ID */
-    /* Este texto se agrega sobre el cuadro creado por el ::before ya creado para .projects-pics que es quien estiliza ese recuadro */
-    content: 'GI + GC';
-}
-
-#pr-pic-3::before {
-    /* Establece el texto para el ::before para este ID */
-    /* Este texto se agrega sobre el cuadro creado por el ::before ya creado para .projects-pics que es quien estiliza ese recuadro */
-    content: 'A + GI + GC';
-}
-
-#pr-pic-4::before {
-    /* Establece el texto para el ::before para este ID */
-    /* Este texto se agrega sobre el cuadro creado por el ::before ya creado para .projects-pics que es quien estiliza ese recuadro */
-    content: 'GC';
-}
-
-
-
-#pr-pic-1 {
-    margin: 2em;
-    width: 400px;
+    /* width: 400px; */
     height: 250px;
     overflow: hidden; /* overflow de la tarjeta con frostglass en relación a la imágen principal*/
-    background-image: url(img/pr-1.jpg);
     background-size: cover;
-  }
-  
-  #pr-info-1 {
+}
+
+  .projects-info {
     position: flex;
     width: 110%;
     height: 150%;
     background-color: #fff; /* color del frostglass - container de info */
     transform: translateY(100%)
-      translateY(10%) /* saca del frame a la imágen de #pr-info-1:before - Debe ser el opuesto (+/-) del translateY de :before */
+      translateY(-10%) /* saca del frame a la img de #projects-info:before - Debe ser opuesto (+/-) del translateY de :before */
       translateZ(0);
     transition: transform 0.5s ease-out;
     margin-left: -5%;
-    margin-top:-16%;
+    margin-top:-4%;
+    
+    overflow: hidden;
 
   }
-  
-  #pr-info-1:before {
+
+  .projects-info:before {
     z-index: -1;
     display: block;
     position: absolute;
@@ -398,20 +357,67 @@ header span {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-image: url(img/pr-1.jpg); /* imágen de fondo del frost glass */
     filter: blur(0px);
     background-size: contain;
     opacity: 0.1;
     transform: translateY(-100%)
-      translateY(-10%)  /* saca del frame al frostglass de #pr-info-1 - Debe ser el opuesto (+/-) del translateY del frostglass */
+      translateY(10%)  /* saca del frame al frostglass de #pr-info-1 - Debe ser el opuesto (+/-) del translateY del frostglass */
       translateZ(0);
     transition: transform 0.5s ease-out;
+
   }
   
+
+  #pr-pic-1, #pr-info-1:before {
+    background-image: url(img/pr-1.jpg); 
+    /* imagen de fondo (mas visible) y tambien la imagen detras del frostglass (menos visible) */
+  }
+
+  #pr-pic-2, #pr-info-2:before {
+    background-image: url(img/pr-2.jpg); 
+    /* imagen de fondo (mas visible) y tambien la imagen detras del frostglass (menos visible) */
+  }
+
+  #pr-pic-3, #pr-info-3:before {
+    background-image: url(img/pr-3.jpg); 
+    /* imagen de fondo (mas visible) y tambien la imagen detras del frostglass (menos visible) */
+  }
+
+  #pr-pic-4, #pr-info-4:before {
+    background-image: url(img/pr-4.jpg); 
+    /* imagen de fondo (mas visible) y tambien la imagen detras del frostglass (menos visible) */
+  }
+
+
   #pr-pic-1:hover #pr-info-1,
-  #pr-pic-1:hover #pr-info-1:before {
+  #pr-pic-1:hover #pr-info-1:before,
+  #pr-pic-1:hover .projects-info:before {
     transform: translateY(0) translateZ(0);
   }
+
+  #pr-pic-2:hover #pr-info-2,
+  #pr-pic-2:hover #pr-info-2:before,
+  #pr-pic-2:hover .projects-info:before {
+    transform: translateY(0) translateZ(0);
+  }
+
+  #pr-pic-3:hover #pr-info-3,
+  #pr-pic-3:hover #pr-info-3:before,
+  #pr-pic-3:hover .projects-info:before {
+    transform: translateY(0) translateZ(0);
+  }
+
+  #pr-pic-4:hover #pr-info-4,
+  #pr-pic-4:hover #pr-info-4:before,
+  #pr-pic-4:hover .projects-info:before {
+    transform: translateY(0) translateZ(0);
+  }
+
+
+
+
+
+
   
   .title {
     margin: 0;
@@ -428,41 +434,3 @@ header span {
     line-height: 1.5;
   }
 
-
-
-
-
-
-
-
-
-
-/* #pr-pic-1 {
-    background-image: linear-gradient(75deg, rgba(255, 255, 255, 0) 100%, rgba(255,255,255,0) 0%), url(img/pr-1.jpg);
-    
-} */
-
-
-#pr-pic-2 {
-    background-image: url(img/pr-2.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 30%;
-    margin: 1em;
-}
-
-#pr-pic-3 {
-    background-image: url(img/pr-3.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 30%;
-    margin: 1em;
-}
-
-#pr-pic-4 {
-    background-image: url(img/pr-4.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 30%;
-    margin: 1em;
-}
