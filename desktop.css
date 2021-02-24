@@ -16,7 +16,7 @@
 html body  {
     padding: 0;
     margin: 0;
-    background-color: green;
+    background-color: white;
     background-image: url('img/hero-bg.jpg');
     background-size: cover;
     background-attachment: fixed;
@@ -86,18 +86,19 @@ header span {
     text-align: center;
     align-items: center;
     color: white;
+    margin-top: 1em;
 }
 
 .hero-section h1 {
-    background-color: red;
-    font-size: 3.8em;
+    background-color: transparent;
+    font-size: 3.9em;
     letter-spacing: 0.1em;
     line-height: 0.3em;
 
 }
 
 .hero-section span {
-    background-color: blue;
+    background-color: transparent;
     font-weight: 300;
 }
 
@@ -129,10 +130,10 @@ header span {
 }
 
 .about-grids {
-    background-color: red;
+    background-color: var(--deep-white);
     width: 23%;
     margin: 0.5em;
-    padding: 0.5em;
+    padding: 0em;
 }
 
 .about-grids img {
@@ -147,6 +148,7 @@ header span {
     width: 88%;
     margin: auto;
     line-height: 1.4em;
+    padding: 0.5em;
 }
 
 .timeline-section {
@@ -181,7 +183,7 @@ header span {
 
 
 .timeline-article p {
-    background-color: red;
+    background-color: transparent;
     text-align: justify;
     font-family: 'Roboto', sans-serif;
     font-size: 1.18em;
@@ -225,7 +227,7 @@ header span {
 	0% {
 	opacity: 0;
     
-    background-color: blue;
+    background-color: transparent;
 	-webkit-transform: translate3d(0,40%,0);
 	transform: translate3d(0,40%,0);
 	}
@@ -233,14 +235,14 @@ header span {
 	100% {
 	opacity: 1;
     transform: translate(0, 0);
-    background-color: blue;
+    background-color: transparent;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 	}
 }
 
 .timeline-grids {
-    background-color: blue;
+    background-color: transparent;
     padding-right: 5em;
     padding-left: 5em;
     margin: 7em 5em;
@@ -287,14 +289,14 @@ header span {
 #legend {
     display: flex;
     flex-flow: column wrap;
-    background-color: green;
+    background-color: transparent;
 }
 
 #legend ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    background-color: red;
+    background-color: transparent;
 }
 
 #legend li {
@@ -307,19 +309,13 @@ header span {
 }
 
 .projects-grid {
-    background-color: purple;
+    background-color: transparent;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     height: 100vh;
     padding-bottom: 3em; /*padding extra para ajustar el YELLOW CHEVRON que separa secciones */
 }
-
-
-
-
-
-
 
 
 .projects-pics {
@@ -412,12 +408,6 @@ header span {
     transform: translateY(0) translateZ(0);
   }
 
-
-
-
-
-
-  
   .title {
     margin: 0;
     margin-top: 1.1em;
@@ -450,15 +440,22 @@ header span {
   }
 
   .where {
+    background-color: white;
       display: flex;
       flex-flow: column wrap;
       justify-content: center;
       text-align: center;
       padding-top: 7em;
-      height: 100vh;
+      height: 90vh;
   }
 
   .where iframe {
       padding: 5em;
   }
 
+  footer {
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      padding: 1em;
+  }
