@@ -269,7 +269,7 @@ header span {
     padding: 0;
 }
 
-.projects {
+.projects-section {
     background: white;
     width: 100%;;
     display: flex;
@@ -278,7 +278,7 @@ header span {
     color: black;
 }
 
-.projects h2 {
+.projects-section h2 {
     margin-top: 3em;
 }
 
@@ -312,6 +312,29 @@ header span {
     height: 100vh;
     padding-bottom: 3em; /*padding extra para ajustar el YELLOW CHEVRON que separa secciones */
 }
+
+.title {
+    margin: 0;
+    margin-top: 0.4em;
+    padding: 0.9em;
+    font-size: 2em;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.87);
+  }
+  
+  .description {
+    margin: 0;
+    padding: 0 2.2em 2.2em;
+    font-size: 1em;
+    line-height: 1.5;
+  }
+
+  .description-legend {
+      font-size: 1.2em;
+      font-weight: 600;
+      background-color: var(--deeper-yellow);
+      padding: 0.7em;
+  }
 
 
 .projects-pics {
@@ -404,35 +427,12 @@ header span {
     transform: translateY(0) translateZ(0);
   }
 
-  .title {
-    margin: 0;
-    margin-top: 1.1em;
-    padding: 0.9em;
-    font-size: 2em;
-    line-height: 1;
-    color: rgba(0, 0, 0, 0.87);
-  }
-  
-  .description {
-    margin: 0;
-    padding: 0 2.2em 2.2em;
-    font-size: 1em;
-    line-height: 1.5;
-  }
-
-  .description-legend {
-      font-size: 1.2em;
-      font-weight: 600;
-      background-color: var(--deeper-yellow);
-      padding: 0.7em;
-  }
 
   .pr-video {
       background-color: white;
-      width: 100%;
-      /* height: 100vh; */
-      /* overflow: hidden; */
+      overflow: hidden;
       padding-top: 5em;
+      opacity: 1;
   }
 
   .where {
@@ -496,13 +496,34 @@ header span {
         font-size: 1.18em;
         padding-left: 1.5em;
         padding-right: 1em;
-  }
+    }
 
   .timeline-grids {
     padding-right: 3em;
     padding-left: 3em;
     margin: 7em 4em;
-}
+    }
+
+  .title {
+    margin: 0;
+    margin-top: 0.5em;
+    padding: 0.7em;
+    font-size: 1.87em;
+  }
+  
+  .description {
+    font-size: 0.95em;
+    padding: 0 1.8em 2.5em;
+  }
+
+  .description-legend {
+      font-size: 1.2em;
+      padding: 0.7em;
+  }
+
+
+
+    
 
 }
 
@@ -512,7 +533,14 @@ header span {
 
 
 
-  @media (max-width: 930px) {
+
+
+
+
+
+
+
+  @media (max-width: 940px) {
     header {
       background-color: green;
     }
