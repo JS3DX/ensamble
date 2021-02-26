@@ -110,7 +110,6 @@ header span {
     text-align: center;
     flex-flow: column wrap;
     padding-bottom: 7em; /* EXTRA PADDING TO ADJUST YELLOW CHEVRON */
-    
     margin: 0;
 }
 
@@ -459,6 +458,10 @@ header span {
 
 
 
+
+
+
+
   @media (max-width: 1250px) {
     header {
         background-color: red;
@@ -466,7 +469,6 @@ header span {
 
     .hero-section h1 {
         font-size: 3.7em;
-        line-height: 0.2em;
     }
 
     .about-article {
@@ -521,20 +523,7 @@ header span {
       padding: 0.7em;
   }
 
-
-
-    
-
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -546,9 +535,55 @@ header span {
     }
 
     .hero-section h1 {
-      font-size: 3.2em;
-      line-height: 0.2em;
+        font-size: 4.8vw;
+        line-height: 0.2em;
   }
-    
 
+  .map-info iframe {
+    width: 90%;
+}
+    
+}
+
+@media (max-width: 790px) {
+    header {
+      background-color: pink;
+    }
+
+    .about-article {
+        flex-flow: row wrap;
+        height: auto;
+    }
+    
+    .about-grids {
+        width: 60%;
+        margin: 1em;
+    }
+
+    .timeline-article {
+        width: 80%;
+        margin: 0;
+    }
+
+    .timeline-section {
+        justify-content: center;
+    }
+
+    .timeline-article h2 {
+        font-size: 5.7vw;
+    }
+
+
+
+
+
+    .pr-video video {
+        display: none;
+    }
+
+    .map-info iframe {
+        width: 90%;
+    }
+
+    
 }
