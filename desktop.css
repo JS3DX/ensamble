@@ -119,7 +119,6 @@ header span {
     margin: 1em;
 }
 
-
 .about-article {
     display: flex;
     justify-content: center;
@@ -182,7 +181,6 @@ header span {
     margin-left: 0; /* Ajusta el recuadro amarillo del H2 para que quede bajo el H2*/
 }
 
-
 .timeline-article p {
     background-color: transparent;
     text-align: justify;
@@ -190,17 +188,18 @@ header span {
     font-size: 1.18em;
     font-weight: 200;
     margin: 1.5em;
-    padding-left: 3.3em;
-    padding-right: 5em;
+    padding-left: 2.8em;
+    padding-right: 2em;
     line-height: 1.8em;
 }
+
+/* SECCION DE RECUENTO HISTORICO DE PROYECTOS Y AÑOS */
+
 
 .timeline-graph-section {
     background-color: var(--deeper-yellow);
     font-family: 'Rubik', sans-serif;
 }
-
-
 
 .timeline-graphs {
     display: flex;
@@ -268,9 +267,11 @@ header span {
     padding: 0;
 }
 
+/* Seccion de recuadro de proyectos  */
+
 .projects-section {
     background: white;
-    width: 100%;;
+    width: 100%;
     display: flex;
     flex-flow: column wrap;
     text-align: center;
@@ -308,13 +309,13 @@ header span {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    height: 100vh;
+    height: auto;
     padding-bottom: 3em; /*padding extra para ajustar el YELLOW CHEVRON que separa secciones */
 }
 
 .title {
     margin: 0;
-    margin-top: 0.4em;
+    margin-top: 0.6em;
     padding: 0.9em;
     font-size: 2em;
     line-height: 1;
@@ -358,7 +359,7 @@ header span {
       translateZ(0);
     transition: transform 0.5s ease-out;
     margin-left: -5%;
-    margin-top:-4%;
+    margin-top:-4%; /* margen del frostglass, en relación a la distancia que abarca del total del recuadro */
     overflow: hidden;
   }
 
@@ -377,7 +378,6 @@ header span {
       translateY(10%)  /* saca del frame al frostglass de #pr-info-1 - Debe ser el opuesto (+/-) del translateY del frostglass */
       translateZ(0);
     transition: transform 0.5s ease-out;
-
   }
   
 
@@ -445,7 +445,10 @@ header span {
   }
 
   .where iframe {
-      padding: 5em;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      margin: auto;
   }
 
   footer {
@@ -477,7 +480,6 @@ header span {
     
     .about-grids {
         width: 25%;
-
     }
 
     .about-grids h3 {
@@ -490,8 +492,9 @@ header span {
         padding: 0.2em 1.4em;
     }
 
+
     .timeline-article {
-        width: 40%;
+        width: 50%;
     }
     
     .timeline-article p {
@@ -508,7 +511,7 @@ header span {
 
   .title {
     margin: 0;
-    margin-top: 0.5em;
+    margin-top: 1.3em;
     padding: 0.7em;
     font-size: 1.87em;
   }
@@ -522,6 +525,15 @@ header span {
       font-size: 1.2em;
       padding: 0.7em;
   }
+
+  .projects-info {
+    margin-top:-6%; /* margen del frostglass, en relación a la distancia que abarca del total del recuadro */
+  }
+
+
+  .projects-pics {
+    width: 35%;
+}
 
 }
 
@@ -537,13 +549,54 @@ header span {
     .hero-section h1 {
         font-size: 4.8vw;
         line-height: 0.2em;
-  }
-
+    }
+  
   .map-info iframe {
     width: 90%;
-}
+    }
+
+
+    .timeline-article {
+        width: 70%;
+        margin: 0;
+    }
+
+    .timeline-section {
+        justify-content: center;
+    }
+
+    .timeline-article h2 {
+        font-size: 4.7vw;
+    }
+
+      .projects-info {
+        width: 120%;
+        margin-left: -7%;
+        margin-top:-6%;
+      }
+
+      .projects-pics {
+        width: 40%;
+    }
+
+    .title {
+        padding: 0;
+        padding-top: 0.6em;
+      }
     
+    .description {
+    font-size: 0.95em;
+    padding-top: 2em;
+    padding-left: 2.2em;
+    padding-right: 3.5em;
+    padding-bottom: 2em;
+    }
+
 }
+
+
+
+
 
 @media (max-width: 790px) {
     header {
@@ -558,6 +611,11 @@ header span {
     .about-grids {
         width: 60%;
         margin: 1em;
+    }
+
+    
+    .about-grids img {
+        display: none;
     }
 
     .timeline-article {
@@ -576,6 +634,29 @@ header span {
 
 
 
+    .timeline-graphs {
+        flex-flow: column wrap;
+    }
+
+    .white-column {
+        display: none;
+    }
+
+    .timeline-grids {
+        padding-right: 1em;
+        padding-left: 1em;
+        margin: 3em 1em;
+    }
+
+    .projects-pics {
+        width: 60%;
+    }
+
+
+
+
+
+
 
     .pr-video video {
         display: none;
@@ -583,6 +664,8 @@ header span {
 
     .map-info iframe {
         width: 90%;
+        padding-top: 4em;
+        padding-bottom: 3em;
     }
 
     
